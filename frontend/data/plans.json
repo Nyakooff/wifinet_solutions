@@ -1,0 +1,48 @@
+{
+  "plans": [
+    {
+      "id": "familiar",
+      "name": "Familiar",
+      "speed": "500 Mbps",
+      "internet_price": 50.00,
+      "duo_price": 70.00,
+      "includes_cable": false,
+      "repeater": null
+    },
+    {
+      "id": "economico",
+      "name": "Económico",
+      "speed": "200 Mbps",
+      "internet_price": 60.00,
+      "duo_price": null,
+      "includes_cable": true,
+      "repeater": null
+    },
+    {
+      "id": "premium",
+      "name": "Premium",
+      "speed": "700 Mbps",
+      "internet_price": 70.00,
+      "duo_price": 100.00,
+      "includes_cable": false,
+      "repeater": "Mesh WiFi6 (duo)"
+    },
+    {
+      "id": "full",
+      "name": "Full",
+      "speed": "1 Gbps",
+      "internet_price": 100.00,
+      "duo_price": 119.00,
+      "includes_cable": false,
+      "repeater": "1-2 x Mesh WiFi6 (según opción)"
+    },
+    {
+      "id": "oferta",
+      "name": "Oferta 2 meses",
+      "speed": "600 Mbps",
+      "price_2months": 50.00,
+      "includes_cable": true,
+      "note": "Promoción por este mes: 2 meses por S/50.00 con 600 Mbps + cable digital"
+    }
+  ]
+}

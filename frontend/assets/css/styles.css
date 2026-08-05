@@ -1,0 +1,24 @@
+:root{
+  --brand-blue: #0057D9;   /* azul */
+  --brand-yellow: #FFD100; /* amarillo */
+  --brand-white: #FFFFFF;  /* blanco */
+  --brand-black: #000000;  /* negro */
+}
+
+/* Tailwind custom classes via plain CSS for safety */
+.bg-brand-blue{ background-color:var(--brand-blue); }
+.text-brand-blue{ color:var(--brand-blue); }
+.bg-brand-yellow{ background-color:var(--brand-yellow); }
+.text-brand-yellow{ color:var(--brand-yellow); }
+.bg-brand-white{ background-color:var(--brand-white); }
+.text-brand-white{ color:var(--brand-white); }
+.bg-brand-black{ background-color:var(--brand-black); }
+.text-brand-black{ color:var(--brand-black); }
+
+/* Ajustes visuales */
+body{ background-color:var(--brand-white); color:var(--brand-black); }
+
+/* Pequeños estilos para que la tabla se vea bien en móvil */
+table thead th{ font-weight:600; }
+.plan-cta{ transition:transform .12s ease; }
+.plan-cta:active{ transform:scale(.98); }

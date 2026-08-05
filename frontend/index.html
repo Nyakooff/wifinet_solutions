@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title></title>
+  <!-- Tailwind CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body class="bg-brand-white text-black antialiased">
+  <!-- Header -->
+  <header class="bg-brand-blue text-white">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+      <!-- Espacio para Logo: reemplaza frontend/assets/images/logo.png -->
+      <div class="flex items-center space-x-4">
+        <div class="w-32 h-12 flex items-center justify-center bg-white/10 rounded">
+          <img src="assets/images/logo.png" alt="Logo" class="max-h-10 object-contain" />
+        </div>
+        <!-- Espacio para producto1 (ej. oferta destacada) -->
+        <div class="hidden md:flex items-center gap-4">
+          <div class="w-20 h-10 bg-white/10 rounded flex items-center justify-center">
+            <img src="assets/images/producto1.png" alt="producto1" class="max-h-8 object-contain"/>
+          </div>
+          <div class="w-20 h-10 bg-white/10 rounded flex items-center justify-center">
+            <img src="assets/images/producto2.png" alt="producto2" class="max-h-8 object-contain"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Menú (íconos / espacio sin títulos) -->
+      <nav class="flex items-center gap-4">
+        <button aria-label="buscar" class="p-2 rounded bg-white/10 hover:bg-white/20">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M3 11a8 8 0 1016 0 8 8 0 00-16 0z"/></svg>
+        </button>
+        <button aria-label="carrito" class="p-2 rounded bg-yellow-400 text-black">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2 6h12l-2-6M10 21a1 1 0 100-2 1 1 0 000 2zm6 0a1 1 0 100-2 1 1 0 000 2z"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero / Productos -->
+  <main class="max-w-7xl mx-auto px-4 py-8">
+    <section class="grid grid-cols-1 md:grid-cols-2 gap-6 items-center">
+      <div class="bg-white rounded-lg shadow p-6 flex flex-col gap-4">
+        <!-- Espacio grande para imagen/hero: usa frontend/assets/images/plan_familiar.png etc. -->
+        <div class="w-full h-56 md:h-72 bg-gray-100 rounded flex items-center justify-center">
+          <img src="assets/images/plan_familiar.png" alt="plan_familiar" class="max-h-full object-contain"/>
+        </div>
+        <div class="grid grid-cols-3 gap-3">
+          <div class="h-24 bg-gray-50 rounded flex items-center justify-center">
+            <img src="assets/images/producto1.png" alt="producto1_thumb" class="max-h-16 object-contain"/>
+          </div>
+          <div class="h-24 bg-gray-50 rounded flex items-center justify-center">
+            <img src="assets/images/producto2.png" alt="producto2_thumb" class="max-h-16 object-contain"/>
+          </div>
+          <div class="h-24 bg-gray-50 rounded flex items-center justify-center">
+            <img src="assets/images/oferta.png" alt="oferta" class="max-h-16 object-contain"/>
+          </div>
+        </div>
+      </div>
+
+      <!-- Resumen / CTA -->
+      <aside class="bg-brand-yellow text-black rounded-lg p-6 shadow">
+        <div class="flex flex-col gap-4">
+          <div class="h-48 bg-white/60 rounded flex items-center justify-center">
+            <!-- Espacio para imagen destacada -->
+            <img src="assets/images/plan_economico.png" alt="plan_economico" class="max-h-40 object-contain"/>
+          </div>
+          <div class="flex gap-3">
+            <a id="cta-whatsapp" class="w-full inline-flex items-center justify-center gap-2 bg-brand-blue text-white py-3 rounded hover:opacity-90 cursor-pointer">
+              <svg class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor"><path d="M..."/></svg>
+              ¡Contacto rápido!
+            </a>
+            <a href="#" class="w-12 h-12 bg-black text-white rounded flex items-center justify-center">i</a>
+          </div>
+        </div>
+      </aside>
+    </section>
+
+    <!-- Comparativa de planes -->
+    <section class="mt-12">
+      <div class="overflow-x-auto">
+        <table class="min-w-full table-auto border-collapse">
+          <thead>
+            <tr class="bg-brand-blue text-white">
+              <th class="p-3 text-left"></th>
+              <th class="p-3 text-left">Familiar</th>
+              <th class="p-3 text-left">Económico</th>
+              <th class="p-3 text-left">Premium</th>
+              <th class="p-3 text-left">Full</th>
+              <th class="p-3 text-left">Oferta Mes</th>
+            </tr>
+          </thead>
+          <tbody class="bg-white divide-y">
+            <tr>
+              <td class="p-3">Velocidad</td>
+              <td class="p-3">500 Mbps</td>
+              <td class="p-3">200 Mbps</td>
+              <td class="p-3">700 Mbps</td>
+              <td class="p-3">1 Gbps</td>
+              <td class="p-3">600 Mbps</td>
+            </tr>
+            <tr>
+              <td class="p-3">Incluye Cable</td>
+              <td class="p-3">Solo internet / opcional duo</td>
+              <td class="p-3">Cable Digital incluido</td>
+              <td class="p-3">Solo / duo con mesh</td>
+              <td class="p-3">Solo / duo con 2 mesh</td>
+              <td class="p-3">Cable Digital incluido</td>
+            </tr>
+            <tr>
+              <td class="p-3">Repetidores</td>
+              <td class="p-3">—</td>
+              <td class="p-3">—</td>
+              <td class="p-3">Incluye repetidor mesh WiFi6 (duo)</td>
+              <td class="p-3">1 o 2 repetidores para opciones</td>
+              <td class="p-3">—</td>
+            </tr>
+            <tr>
+              <td class="p-3">Precio Internet</td>
+              <td class="p-3">S/ 50.00</td>
+              <td class="p-3">S/ 60.00</td>
+              <td class="p-3">S/ 70.00</td>
+              <td class="p-3">S/ 100.00</td>
+              <td class="p-3">—</td>
+            </tr>
+            <tr>
+              <td class="p-3">Precio Duo</td>
+              <td class="p-3">S/ 70.00</td>
+              <td class="p-3">—</td>
+              <td class="p-3">S/ 100.00</td>
+              <td class="p-3">S/ 119.00</td>
+              <td class="p-3">2 meses S/ 50.00</td>
+            </tr>
+            <tr>
+              <td class="p-3">Acción</td>
+              <td class="p-3">
+                <button class="w-full py-2 bg-brand-blue text-white rounded plan-cta" data-plan="Familiar">¡lo quiero!</button>
+              </td>
+              <td class="p-3">
+                <button class="w-full py-2 bg-brand-blue text-white rounded plan-cta" data-plan="Económico">¡lo quiero!</button>
+              </td>
+              <td class="p-3">
+                <button class="w-full py-2 bg-brand-blue text-white rounded plan-cta" data-plan="Premium">¡lo quiero!</button>
+              </td>
+              <td class="p-3">
+                <button class="w-full py-2 bg-brand-blue text-white rounded plan-cta" data-plan="Full">¡lo quiero!</button>
+              </td>
+              <td class="p-3">
+                <button class="w-full py-2 bg-brand-blue text-white rounded plan-cta" data-plan="Oferta 2 meses">¡lo quiero!</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Pie de página / espacios para logos y productos -->
+    <footer class="mt-12 border-t border-gray-200 pt-6 pb-12">
+      <div class="max-w-7xl mx-auto px-4 grid grid-cols-2 md:grid-cols-6 gap-4">
+        <!-- Espacios para logos y productos (reemplazar imágenes) -->
+        <div class="flex items-center justify-center p-4 bg-gray-50 rounded">
+          <img src="assets/images/logo.png" alt="Logo" class="max-h-12"/>
+        </div>
+        <div class="flex items-center justify-center p-4 bg-gray-50 rounded">
+          <img src="assets/images/producto1.png" alt="producto1" class="max-h-12"/>
+        </div>
+        <div class="flex items-center justify-center p-4 bg-gray-50 rounded">
+          <img src="assets/images/producto2.png" alt="producto2" class="max-h-12"/>
+        </div>
+        <div class="flex items-center justify-center p-4 bg-gray-50 rounded">
+          <img src="assets/images/plan_premium.png" alt="plan_premium" class="max-h-12"/>
+        </div>
+        <div class="flex items-center justify-center p-4 bg-gray-50 rounded">
+          <img src="assets/images/plan_full.png" alt="plan_full" class="max-h-12"/>
+        </div>
+        <div class="flex items-center justify-center p-4 bg-gray-50 rounded">
+          <img src="assets/images/oferta.png" alt="oferta" class="max-h-12"/>
+        </div>
+      </div>
+    </footer>
+  </main>
+
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
